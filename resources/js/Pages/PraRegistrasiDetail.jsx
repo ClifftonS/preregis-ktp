@@ -3,6 +3,8 @@ import { Head, useForm } from "@inertiajs/react";
 import InputError from "@/Components/InputError";
 import InputLabel from "@/Components/InputLabel";
 import PrimaryButton from "@/Components/PrimaryButton";
+import { usePage } from "@inertiajs/react";
+import { toast } from "react-hot-toast";
 
 export default function PraRegistrasiDetail() {
     const { data, setData, post, processing, errors } = useForm({
@@ -10,6 +12,11 @@ export default function PraRegistrasiDetail() {
         tanggal_jadwal: "",
         pukul_jadwal: "10.00",
     });
+    const { flash } = usePage().props;
+
+    if (flash.message) {
+        toast.success(flash.message);
+    }
 
     const handleChange = (e) => {
         setData(e.target.name, e.target.value);

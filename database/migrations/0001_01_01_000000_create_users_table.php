@@ -32,6 +32,7 @@ return new class extends Migration
             $table->string('dukcapil')->nullable();
             $table->date('tanggal_jadwal')->nullable();
             $table->string('pukul_jadwal')->nullable();
+            $table->string('nomor_preregis')->nullable();
 
             $table->timestamps();
         });

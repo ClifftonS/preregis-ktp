@@ -44,7 +44,7 @@ class PraRegisController extends Controller
         $user = User::findorfail($id);
         $user->update($validatedData);
 
-        return redirect()->route('praregistrasidetail')->with('message', 'Data berhasil diinput');
+        return redirect()->route('praregistrasi')->with('message', 'Data berhasil diinput');
 
 
     }
@@ -58,11 +58,11 @@ class PraRegisController extends Controller
     'tanggal_jadwal' => ['required', 'date'],
         ]);
 
-
+        $validatedData['nomor_preregis'] = 'PR-' . $id . '-' . time();
         $user = User::findorfail($id);
         $user->update($validatedData);
 
-        return back()->with('message', 'Pre-registrasi Berhasil');
+        return redirect()->route('praregistrasi')->with('message', 'Pre-registrasi Berhasil');
 
 
     }

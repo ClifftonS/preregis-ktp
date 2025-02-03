@@ -35,6 +35,7 @@ class User extends Authenticatable
         'dukcapil',
         'pukul_jadwal',
         'tanggal_jadwal',
+        'nomor_preregis',
     ];
 
     /**

@@ -36,12 +36,16 @@ Route::middleware('auth')->group(function () {
         if (!$user->nama) {
             return Inertia::render('PraRegistrasi');
         }
+        if (!$user->dukcapil) {
+            return Inertia::render('PraRegistrasiDetail');
+        }
+        return Inertia::render('ShowQrcode', [
+            'nopreregis' => $user->nomor_preregis,
 
-        return Inertia::render('PraRegistrasiDetail');
+        ]);
     })->name('praregistrasi');
-    Route::get('/praregistrasidetail', function () {
-        return Inertia::render('PraRegistrasiDetail');
-    })->name('praregistrasidetail');
+
+
     Route::post('/praregistrasi', [PraRegisController::class, 'update'])->name('praregistrasi.update');
     Route::post('/praregistrasidetail', [PraRegisController::class, 'update2'])->name('praregistrasi.update2');
 });
