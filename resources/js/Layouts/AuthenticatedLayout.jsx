@@ -17,7 +17,7 @@ export default function AuthenticatedLayout({ header, children }) {
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="flex h-16 justify-between">
                         <div className="flex">
-                            <div className="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                            <div className=" space-x-8 -my-px ms-10 flex">
                                 <NavLink
                                     href={route("dashboard")}
                                     active={route().current("dashboard")}
@@ -36,7 +36,7 @@ export default function AuthenticatedLayout({ header, children }) {
                             </div>
                         </div>
 
-                        <div className="hidden sm:ms-6 sm:flex sm:items-center">
+                        <div className=" ms-6 flex items-center">
                             <div className="relative ms-3">
                                 <Dropdown>
                                     <Dropdown.Trigger>
@@ -45,19 +45,36 @@ export default function AuthenticatedLayout({ header, children }) {
                                                 type="button"
                                                 className="inline-flex items-center rounded-md border border-transparent bg-white px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition duration-150 ease-in-out hover:text-gray-700 focus:outline-none"
                                             >
-                                                {user.name}
-
                                                 <svg
-                                                    className="-me-0.5 ms-2 h-4 w-4"
                                                     xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 20 20"
-                                                    fill="currentColor"
+                                                    width="30"
+                                                    height="30"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
                                                 >
                                                     <path
-                                                        fillRule="evenodd"
-                                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                                        clipRule="evenodd"
-                                                    />
+                                                        stroke="#292D32"
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        strokeWidth="1.5"
+                                                        d="M12.12 12.78a1 1 0 0 0-.24 0 3.27 3.27 0 0 1-3.16-3.27c0-1.81 1.46-3.28 3.28-3.28a3.276 3.276 0 0 1 .12 6.55"
+                                                        opacity="0.4"
+                                                    ></path>
+                                                    <path
+                                                        stroke="#292D32"
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        strokeWidth="1.5"
+                                                        d="M18.74 19.38A9.93 9.93 0 0 1 12 22c-2.6 0-4.96-.99-6.74-2.62.1-.94.7-1.86 1.77-2.58 2.74-1.82 7.22-1.82 9.94 0 1.07.72 1.67 1.64 1.77 2.58"
+                                                        opacity="0.34"
+                                                    ></path>
+                                                    <path
+                                                        stroke="#292D32"
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        strokeWidth="1.5"
+                                                        d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10"
+                                                    ></path>
                                                 </svg>
                                             </button>
                                         </span>
@@ -81,7 +98,7 @@ export default function AuthenticatedLayout({ header, children }) {
                             </div>
                         </div>
 
-                        <div className="-me-2 flex items-center sm:hidden">
+                        {/* <div className="-me-2 flex items-center sm:hidden">
                             <button
                                 onClick={() =>
                                     setShowingNavigationDropdown(
@@ -120,11 +137,11 @@ export default function AuthenticatedLayout({ header, children }) {
                                     />
                                 </svg>
                             </button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 
-                <div
+                {/* <div
                     className={
                         (showingNavigationDropdown ? "block" : "hidden") +
                         " sm:hidden"
@@ -162,7 +179,7 @@ export default function AuthenticatedLayout({ header, children }) {
                             </ResponsiveNavLink>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </nav>
 
             {header && (

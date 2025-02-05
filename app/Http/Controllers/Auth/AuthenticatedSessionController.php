@@ -33,7 +33,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(route('dashboard', absolute: false))->with('message', 'Berhasil login!');
+        return redirect()->intended(route('praregistrasi', absolute: false))->with('message', 'Berhasil login!');
     }
 
     /**
