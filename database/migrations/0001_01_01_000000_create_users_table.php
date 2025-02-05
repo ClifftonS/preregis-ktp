@@ -33,6 +33,8 @@ return new class extends Migration
             $table->date('tanggal_jadwal')->nullable();
             $table->string('pukul_jadwal')->nullable();
             $table->string('nomor_preregis')->nullable();
+            $table->date('tanggal_preregis')->nullable();
+
 
             $table->timestamps();
         });

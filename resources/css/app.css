@@ -18,3 +18,10 @@
         visibility: hidden;
     }
 }
+
+.chart-container {
+    height: 400px; /* Atur tinggi chart */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

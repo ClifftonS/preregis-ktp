@@ -36,6 +36,7 @@ class User extends Authenticatable
         'pukul_jadwal',
         'tanggal_jadwal',
         'nomor_preregis',
+        'tanggal_preregis',
     ];
 
     /**
@@ -60,6 +61,7 @@ class User extends Authenticatable
             'password' => 'hashed',
             'tanggal_lahir' => 'date',
             'tanggal_jadwal' => 'date',
+            'tanggal_preregis' => 'date',
         ];
     }
 }

@@ -24,11 +24,38 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->name(),
+            'nama' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
-            'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),
+            'nama' => fake()->name(),
+            'alamat' => fake()->address(),
+            'kecamatan' => 'kecamatan',
+            'kelurahan' => 'kelurahan',
+            'kotakabupaten' => fake()->city(),
+            'provinsi' => fake()->state(),
+            'jenis_kelamin' => fake()->randomElement(['Laki-laki', 'Perempuan']),
+            'pekerjaan' => fake()->jobTitle(),
+            'golongan_darah' => fake()->randomElement(['A', 'B', 'AB', 'O']),
+            'tempat_lahir' => fake()->city(),
+            'tanggal_lahir' => fake()->date(),
+            'foto' => fake()->numerify('user_####.png'),
+            'dukcapil' => fake()->randomElement([
+                'Kantor Dukcapil A',
+                'Kantor Dukcapil B',
+                'Kantor Dukcapil C',
+                'Kantor Dukcapil D',
+                'Kantor Dukcapil E'
+            ]),
+            'tanggal_jadwal' => fake()->dateTimeBetween('now', '+30 days')->format('Y-m-d'),
+            'pukul_jadwal' => fake()->randomElement([
+                '10.00',
+                '11.00',
+                '13.00',
+                '14.00',
+            ]),
+            'nomor_preregis' => fake()->numerify('PR-ID-##########'),
+            'tanggal_preregis' => fake()->dateTimeBetween('-30 days', 'now')->format('Y-m-d'),
         ];
     }
 

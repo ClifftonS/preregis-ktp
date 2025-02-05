@@ -5,6 +5,7 @@ import InputLabel from "@/Components/InputLabel";
 import PrimaryButton from "@/Components/PrimaryButton";
 import { usePage } from "@inertiajs/react";
 import { toast } from "react-hot-toast";
+import { useEffect } from "react";
 
 export default function PraRegistrasiDetail() {
     const { data, setData, post, processing, errors } = useForm({
@@ -14,9 +15,11 @@ export default function PraRegistrasiDetail() {
     });
     const { flash } = usePage().props;
 
-    if (flash.message) {
-        toast.success(flash.message);
-    }
+    useEffect(() => {
+        if (flash.message) {
+            toast.success(flash.message);
+        }
+    }, [flash.message]);
 
     const handleChange = (e) => {
         setData(e.target.name, e.target.value);
@@ -33,7 +36,7 @@ export default function PraRegistrasiDetail() {
 
             <div className="py-12">
                 <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                    <div className="overflow-hidden bg-white shadow-sm sm:rounded-lg p-10">
+                    <div className="overflow-hidden bg-white shadow-sm sm:rounded-lg p-10 min-h-[calc(10/12*100vh)]">
                         <h2 className="text-lg font-semibold mb-4 flex justify-center">
                             Pilih Lokasi & Jadwal
                         </h2>

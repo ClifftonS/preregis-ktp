@@ -36,7 +36,7 @@ export default function ShowQrcode({ nopreregis }) {
 
             <div className="noprint py-12">
                 <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                    <div className="overflow-hidden bg-white shadow-sm sm:rounded-lg p-10">
+                    <div className="overflow-hidden bg-white shadow-sm sm:rounded-lg p-10 min-h-[calc(10/12*100vh)]">
                         <h2 className="text-lg font-semibold mb-4 flex justify-center">
                             QR Code
                         </h2>

@@ -59,6 +59,7 @@ class PraRegisController extends Controller
         ]);
 
         $validatedData['nomor_preregis'] = 'PR-' . $id . '-' . time();
+        $validatedData['tanggal_preregis'] = date('Y-m-d');
         $user = User::findorfail($id);
         $user->update($validatedData);
 

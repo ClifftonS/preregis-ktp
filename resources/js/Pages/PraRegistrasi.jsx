@@ -48,7 +48,7 @@ export default function PraRegistrasi() {
 
             <div className="py-12">
                 <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                    <div className="overflow-hidden bg-white shadow-sm sm:rounded-lg p-10">
+                    <div className="overflow-hidden bg-white shadow-sm sm:rounded-lg p-10 min-h-[calc(10/12*100vh)]">
                         <h2 className="text-lg font-semibold mb-4 flex justify-center">
                             Pre-Registrasi Form
                         </h2>
@@ -57,8 +57,8 @@ export default function PraRegistrasi() {
                             encType="multipart/form-data"
                             className="space-y-4"
                         >
-                            <div className="grid grid-cols-2 gap-4">
-                                <div>
+                            <div className="sm:grid grid-cols-2 gap-4">
+                                <div className="mb-4 sm:mb-0">
                                     <InputLabel
                                         htmlFor="nama"
                                         value="Nama Lengkap"
@@ -76,7 +76,7 @@ export default function PraRegistrasi() {
                                         className="mt-2"
                                     />
                                 </div>
-                                <div>
+                                <div className="mb-4 sm:mb-0">
                                     <InputLabel
                                         htmlFor="jenis_kelamin"
                                         value="Jenis Kelamin"
@@ -119,7 +119,7 @@ export default function PraRegistrasi() {
                                     />
                                 </div>
 
-                                <div>
+                                <div className="mb-4 sm:mb-0">
                                     <InputLabel
                                         htmlFor="pekerjaan"
                                         value="Pekerjaan"
@@ -137,7 +137,7 @@ export default function PraRegistrasi() {
                                         className="mt-2"
                                     />
                                 </div>
-                                <div>
+                                <div className="mb-4 sm:mb-0">
                                     <InputLabel
                                         htmlFor="golongan_darah"
                                         value="Golongan Darah"
@@ -162,7 +162,7 @@ export default function PraRegistrasi() {
                                         className="mt-2"
                                     />
                                 </div>
-                                <div>
+                                <div className="mb-4 sm:mb-0">
                                     <InputLabel
                                         htmlFor="tempat_lahir"
                                         value="Tempat Lahir"
@@ -180,7 +180,7 @@ export default function PraRegistrasi() {
                                         className="mt-2"
                                     />
                                 </div>
-                                <div>
+                                <div className="mb-4 sm:mb-0">
                                     <InputLabel
                                         htmlFor="tanggal_lahir"
                                         value="Tanggal Lahir"
@@ -198,7 +198,7 @@ export default function PraRegistrasi() {
                                         className="mt-2"
                                     />
                                 </div>
-                                <div>
+                                <div className="mb-4 sm:mb-0">
                                     <InputLabel
                                         htmlFor="alamat"
                                         value="Alamat"
@@ -216,7 +216,7 @@ export default function PraRegistrasi() {
                                         className="mt-2"
                                     />
                                 </div>
-                                <div>
+                                <div className="mb-4 sm:mb-0">
                                     <InputLabel
                                         htmlFor="kecamatan"
                                         value="Kecamatan"
@@ -234,7 +234,7 @@ export default function PraRegistrasi() {
                                         className="mt-2"
                                     />
                                 </div>
-                                <div>
+                                <div className="mb-4 sm:mb-0">
                                     <InputLabel
                                         htmlFor="kelurahan"
                                         value="Kelurahan"
@@ -252,7 +252,7 @@ export default function PraRegistrasi() {
                                         className="mt-2"
                                     />
                                 </div>
-                                <div>
+                                <div className="mb-4 sm:mb-0">
                                     <InputLabel
                                         htmlFor="kotakabupaten"
                                         value="Kota/Kabupaten"
@@ -270,7 +270,7 @@ export default function PraRegistrasi() {
                                         className="mt-2"
                                     />
                                 </div>
-                                <div>
+                                <div className="mb-4 sm:mb-0">
                                     <InputLabel
                                         htmlFor="provinsi"
                                         value="Provinsi"
@@ -289,7 +289,7 @@ export default function PraRegistrasi() {
                                     />
                                 </div>
                             </div>
-                            <div>
+                            <div className="mb-4 sm:mb-0">
                                 <InputLabel
                                     htmlFor="foto"
                                     value="Upload Foto"
