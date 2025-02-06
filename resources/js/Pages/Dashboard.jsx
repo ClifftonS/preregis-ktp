@@ -70,14 +70,16 @@ export default function Dashboard({ genderData, ageData, dailyRegistrations }) {
                 label: "Pendaftar Harian",
                 data: dailyRegistrations.map((item) => item.jumlah),
                 borderColor: "#FF9800",
+                backgroundColor: "#FF9800",
+                pointBackgroundColor: "#000000",
                 fill: false,
+                tension: 0.1,
             },
         ],
     };
 
     const chartOptions = {
         responsive: true,
-        // Membuat ukuran chart bisa disesuaikan
     };
 
     const options = {

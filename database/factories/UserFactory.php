@@ -38,7 +38,7 @@ class UserFactory extends Factory
             'pekerjaan' => fake()->jobTitle(),
             'golongan_darah' => fake()->randomElement(['A', 'B', 'AB', 'O']),
             'tempat_lahir' => fake()->city(),
-            'tanggal_lahir' => fake()->date(),
+            'tanggal_lahir' => fake()->dateTimeBetween('-60 years', '-17 years')->format('Y-m-d'),
             'foto' => fake()->numerify('user_####.png'),
             'dukcapil' => fake()->randomElement([
                 'Kantor Dukcapil A',
